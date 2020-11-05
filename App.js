@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, TextInput } from "react-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default function Cat()
+{
+    const emoji = '😋';
+
+    return (
+        <View
+            style={{ backgroundColor: 'gold', paddingHorizontal: 24, paddingBottom: 24, paddingTop: 48 }}>
+            <Text>Hello, I am your cat! {emoji}</Text>
+            <TextInput
+                style=
+                {{
+                    height: 40,
+                    borderColor: 'gray',
+                    borderWidth: 1
+                }}
+                defaultValue="Text"
+            />
+        </View>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
